@@ -73,6 +73,11 @@ def main():
     GPIO.setup(IR_LEFT_PIN, GPIO.IN)   #GPIO 4 -> Right IR out
 
     def recognize_image():
+        
+        # 先丟掉前十張舊的辨識結果
+        for i in range(10):
+            image = video_dev.read()
+        
         ret, orig_image = video_dev.read()
         assert ret is not None
 
@@ -122,11 +127,11 @@ def main():
 
         pwm1.ChangeDutyCycle(100)
         pwm2.ChangeDutyCycle(0)
-        time.sleep(0.35)
+        time.sleep(0.55)
 
         pwm1.ChangeDutyCycle(0)
         pwm2.ChangeDutyCycle(0)
-        time.sleep(1)
+        time.sleep(0.6)
 
         pwm1.ChangeDutyCycle(100)
         pwm2.ChangeDutyCycle(100)
@@ -141,7 +146,7 @@ def main():
 
         pwm1.ChangeDutyCycle(0)
         pwm2.ChangeDutyCycle(100)
-        time.sleep(0.35)
+        time.sleep(0.45)
 
         pwm1.ChangeDutyCycle(0)
         pwm2.ChangeDutyCycle(0)
