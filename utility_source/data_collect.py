@@ -14,7 +14,7 @@ IR_LEFT_PIN= 2
 IR_MIDDLE_PIN= 3
 IR_RIGHT_PIN=  4
 
-DUTY_CYCLE = 70
+DUTY_CYCLE = 65
 IMAGE_QUEUE_LIMIT = 400
 
 def main():
@@ -108,7 +108,7 @@ def main():
                 forward()
 
             elif advice == 'stall':
-                turn_left()
+                forward()
 
             # 拍攝照片並儲存到序列
             ret, image = video_dev.read()

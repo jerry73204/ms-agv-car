@@ -11,7 +11,7 @@ IR_LEFT_PIN = 2
 IR_MIDDLE_PIN = 3
 IR_RIGHT_PIN = 4
 
-DUTY_CYCLE = 80
+DUTY_CYCLE = 65
 
 
 def main():
@@ -91,8 +91,8 @@ def main():
                 forward()
 
             elif advice == 'stall':
-                print('動作:', '左轉')
-                turn_left()
+                print('動作:', '前進')
+                forward()
 
             print()
 
