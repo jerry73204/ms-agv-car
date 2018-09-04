@@ -112,7 +112,7 @@ def main():
 
             # 拍攝照片並儲存到序列
             ret, image = video_dev.read()
-            images.append((os.path.join(args.data_dir, '%d-%s.jpg' % (time.time(), advice)), image))
+            images.append((os.path.join(args.data_dir, '%d-%s.jpg' % (int(time.time() * 1000), advice)), image))
 
             print('queue size: %d' % (len(images) + 1))
 
