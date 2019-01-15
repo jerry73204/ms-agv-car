@@ -92,13 +92,9 @@ def custom_model_fn(features, labels, mode, params):
 
     # 區塊函數，由多層 conv2d、batch_normalization 構成
     def conv_block(x, filters):
-        # Movidius compiler does not support FusedBatchNorm operator.
-        # To avoid this error, pass fused=False to batch_normalization()
-
         # x = tf.layers.batch_normalization(
         #     x,
         #     training=training,
-        #     fused=False,
         # )
         x = tf.layers.conv2d(
             x,
@@ -112,7 +108,6 @@ def custom_model_fn(features, labels, mode, params):
         # x = tf.layers.batch_normalization(
         #     x,
         #     training=training,
-        #     fused=False,
         # )
         shortcut = x
         x = tf.layers.conv2d(
@@ -147,7 +142,6 @@ def custom_model_fn(features, labels, mode, params):
     # x = tf.layers.batch_normalization(
     #     x,
     #     training=training,
-    #     fused=False,
     # )
     x = tf.layers.dense(
         x,
@@ -177,14 +171,10 @@ def custom_model_fn(features, labels, mode, params):
             'class_ids': predicted_classes[:, tf.newaxis],
             'probabilities': probabilities,
         }
-        # export_outputs = {
-        #     params['output_name']: tf.estimator.export.PredictOutput(probabilities),
-        # }
 
         return tf.estimator.EstimatorSpec(
             mode,
             predictions=predictions,
-            # export_outputs=export_outputs,
         )
 
     # 計算損失值及精準度

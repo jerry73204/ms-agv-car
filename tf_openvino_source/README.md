@@ -31,8 +31,8 @@ data_dir
 上層的 `models/tf_openvino_model` 目錄也有訓練好的模型可參考。
 
 ```sh
-# 訓練 128 回合，完成輸出模型到 saved_model 目錄
-./train_tensorflow_model.py --model-base-dir saved_model \
+# 訓練 128 回合，完成輸出模型到 tf_model 目錄
+./train_tensorflow_model.py --model-base-dir tf_model \
                             --data-dir ~/dataset
 ```
 
@@ -43,7 +43,7 @@ data_dir
 source /opt/intel/computer_vision_sdk/bin/setupvars.sh
 
 # 路徑中的 XXXXXXXXXX 請依據實際路徑填寫全部都是數字。指令完成時會輸出 `mo2_model` 目錄
-mo_tf.py --saved_model_dir saved_model/XXXXXXXXXX \
+mo_tf.py --saved_model_dir tf_model/XXXXXXXXXX \
          --output_dir mo2_model \
          --input_shape [1,48,48,3] \
          --input input_image \
@@ -53,8 +53,8 @@ mo_tf.py --saved_model_dir saved_model/XXXXXXXXXX \
 講模型檔 model.graph 移到 RPi 上，在上面執行 `movidius_video.py` 使用攝影機測試模型。
 
 ```sh
-./movidius_video.py --model-file mo2_model/saved_model.xml \
-                    --weights-file mo2_model/saved_model.bin
+./movidius_video.py --model-file mo2_model/tf_model.xml \
+                    --weights-file mo2_model/tf_model.bin
 ```
 
 `movidius_car.py` 是結合軌跡車和 Movidius 模型的範例。

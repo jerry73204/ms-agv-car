@@ -1,32 +1,60 @@
 <?xml version="1.0" ?>
 <mapping>
 	<map>
-		<framework name="conv2d_8/BiasAdd" out_port_id="0"/>
-		<IR id="25" name="conv2d_8/Conv2D" out_port_id="3"/>
+		<framework name="conv2d_7/Relu" out_port_id="0"/>
+		<IR id="22" name="conv2d_7/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_3/BiasAdd" out_port_id="0"/>
+		<IR id="9" name="conv2d_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_2/Relu" out_port_id="0"/>
+		<IR id="8" name="conv2d_2/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Add_4" out_port_id="0"/>
+		<IR id="29" name="Add_4" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="dense_1/BiasAdd" out_port_id="0"/>
+		<IR id="34" name="dense_1/MatMul" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_7/BiasAdd" out_port_id="0"/>
+		<IR id="21" name="conv2d_7/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_6/Relu" out_port_id="0"/>
+		<IR id="20" name="conv2d_6/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="dense/BiasAdd" out_port_id="0"/>
+		<IR id="32" name="dense/MatMul" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_1/Relu" out_port_id="0"/>
+		<IR id="4" name="conv2d_1/Relu" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="max_pooling2d_3/MaxPool" out_port_id="0"/>
 		<IR id="24" name="max_pooling2d_3/MaxPool" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="max_pooling2d_4/MaxPool" out_port_id="0"/>
-		<IR id="30" name="max_pooling2d_4/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="flatten/Reshape" out_port_id="0"/>
-		<IR id="31" name="flatten/Reshape" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_7/Relu" out_port_id="0"/>
-		<IR id="22" name="conv2d_7/Relu" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_6/BiasAdd" out_port_id="0"/>
-		<IR id="19" name="conv2d_6/Conv2D" out_port_id="3"/>
-	</map>
-	<map>
 		<framework name="Add_3" out_port_id="0"/>
 		<IR id="23" name="Add_3" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d/Relu" out_port_id="0"/>
+		<IR id="2" name="conv2d/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="max_pooling2d_1/MaxPool" out_port_id="0"/>
+		<IR id="12" name="max_pooling2d_1/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_8/Relu" out_port_id="0"/>
+		<IR id="26" name="conv2d_8/Relu" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="max_pooling2d/MaxPool" out_port_id="0"/>
@@ -37,119 +65,91 @@
 		<IR id="10" name="conv2d_3/Relu" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="Add_2" out_port_id="0"/>
-		<IR id="17" name="Add_2" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="Add" out_port_id="0"/>
-		<IR id="5" name="Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_9/Relu" out_port_id="0"/>
-		<IR id="28" name="conv2d_9/Relu" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_9/BiasAdd" out_port_id="0"/>
-		<IR id="27" name="conv2d_9/Conv2D" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="max_pooling2d_1/MaxPool" out_port_id="0"/>
-		<IR id="12" name="max_pooling2d_1/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d/BiasAdd" out_port_id="0"/>
-		<IR id="1" name="conv2d/Conv2D" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="dense_2/BiasAdd" out_port_id="0"/>
-		<IR id="36" name="dense_2/MatMul" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d/Relu" out_port_id="0"/>
-		<IR id="2" name="conv2d/Relu" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_5/Relu" out_port_id="0"/>
-		<IR id="16" name="conv2d_5/Relu" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="max_pooling2d_2/MaxPool" out_port_id="0"/>
-		<IR id="18" name="max_pooling2d_2/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_7/BiasAdd" out_port_id="0"/>
-		<IR id="21" name="conv2d_7/Conv2D" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_1/Relu" out_port_id="0"/>
-		<IR id="4" name="conv2d_1/Relu" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_2/Relu" out_port_id="0"/>
-		<IR id="8" name="conv2d_2/Relu" out_port_id="1"/>
+		<framework name="probabilities" out_port_id="0"/>
+		<IR id="37" name="probabilities" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="conv2d_1/BiasAdd" out_port_id="0"/>
 		<IR id="3" name="conv2d_1/Conv2D" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="conv2d_2/BiasAdd" out_port_id="0"/>
-		<IR id="7" name="conv2d_2/Conv2D" out_port_id="3"/>
+		<framework name="conv2d_5/Relu" out_port_id="0"/>
+		<IR id="16" name="conv2d_5/Relu" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="probabilities" out_port_id="0"/>
-		<IR id="37" name="probabilities" out_port_id="1"/>
+		<framework name="max_pooling2d_4/MaxPool" out_port_id="0"/>
+		<IR id="30" name="max_pooling2d_4/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_9/Relu" out_port_id="0"/>
+		<IR id="28" name="conv2d_9/Relu" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="Add_1" out_port_id="0"/>
 		<IR id="11" name="Add_1" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="dense/BiasAdd" out_port_id="0"/>
-		<IR id="32" name="dense/MatMul" out_port_id="3"/>
+		<framework name="conv2d_4/Relu" out_port_id="0"/>
+		<IR id="14" name="conv2d_4/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="dense_2/BiasAdd" out_port_id="0"/>
+		<IR id="36" name="dense_2/MatMul" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="max_pooling2d_2/MaxPool" out_port_id="0"/>
+		<IR id="18" name="max_pooling2d_2/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_8/BiasAdd" out_port_id="0"/>
+		<IR id="25" name="conv2d_8/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="Add" out_port_id="0"/>
+		<IR id="5" name="Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_2/BiasAdd" out_port_id="0"/>
+		<IR id="7" name="conv2d_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d/BiasAdd" out_port_id="0"/>
+		<IR id="1" name="conv2d/Conv2D" out_port_id="3"/>
 	</map>
 	<map>
 		<framework name="conv2d_4/BiasAdd" out_port_id="0"/>
 		<IR id="13" name="conv2d_4/Conv2D" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="dense_1/Relu" out_port_id="0"/>
-		<IR id="35" name="dense_1/Relu" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="dense/Relu" out_port_id="0"/>
-		<IR id="33" name="dense/Relu" out_port_id="1"/>
+		<framework name="conv2d_6/BiasAdd" out_port_id="0"/>
+		<IR id="19" name="conv2d_6/Conv2D" out_port_id="3"/>
 	</map>
 	<map>
 		<framework name="conv2d_5/BiasAdd" out_port_id="0"/>
 		<IR id="15" name="conv2d_5/Conv2D" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="Add_4" out_port_id="0"/>
-		<IR id="29" name="Add_4" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_4/Relu" out_port_id="0"/>
-		<IR id="14" name="conv2d_4/Relu" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="dense_1/BiasAdd" out_port_id="0"/>
-		<IR id="34" name="dense_1/MatMul" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_3/BiasAdd" out_port_id="0"/>
-		<IR id="9" name="conv2d_3/Conv2D" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_8/Relu" out_port_id="0"/>
-		<IR id="26" name="conv2d_8/Relu" out_port_id="1"/>
+		<framework name="dense/Relu" out_port_id="0"/>
+		<IR id="33" name="dense/Relu" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="input_image" out_port_id="0"/>
 		<IR id="0" name="input_image" out_port_id="0"/>
 	</map>
 	<map>
-		<framework name="conv2d_6/Relu" out_port_id="0"/>
-		<IR id="20" name="conv2d_6/Relu" out_port_id="1"/>
+		<framework name="Add_2" out_port_id="0"/>
+		<IR id="17" name="Add_2" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="dense_1/Relu" out_port_id="0"/>
+		<IR id="35" name="dense_1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_9/BiasAdd" out_port_id="0"/>
+		<IR id="27" name="conv2d_9/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="flatten/Reshape" out_port_id="0"/>
+		<IR id="31" name="flatten/Reshape" out_port_id="1"/>
 	</map>
 </mapping>
