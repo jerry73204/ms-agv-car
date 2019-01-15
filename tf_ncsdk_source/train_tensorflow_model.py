@@ -104,6 +104,7 @@ def custom_model_fn(features, labels, mode, params):
             x,
             filters=filters,
             kernel_size=(3, 3),
+            strides=(1, 1),
             padding='same',
             activation=tf.nn.relu,
         )
@@ -125,7 +126,8 @@ def custom_model_fn(features, labels, mode, params):
         x = tf.layers.max_pooling2d(
             x,
             pool_size=(2, 2),
-            strides=(2, 2),
+            strides=(1, 1),
+            padding='same',
         )
 
         return x
