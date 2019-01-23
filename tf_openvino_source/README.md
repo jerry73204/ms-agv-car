@@ -45,9 +45,10 @@ source /opt/intel/computer_vision_sdk/bin/setupvars.sh
 # 路徑中的 XXXXXXXXXX 請依據實際路徑填寫全部都是數字。指令完成時會輸出 `mo2_model` 目錄
 mo_tf.py --saved_model_dir tf_model/XXXXXXXXXX \
          --output_dir mo2_model \
-         --input_shape [1,48,48,3] \
+         --input_shape "[1,48,48,3]" \
          --input input_image \
-         --output probabilities
+         --output probabilities \
+         --data_type FP16
 ```
 
 講模型檔 model.graph 移到 RPi 上，在上面執行 `movidius_video.py` 使用攝影機測試模型。
