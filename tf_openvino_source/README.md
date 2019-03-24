@@ -61,5 +61,6 @@ mo_tf.py --saved_model_dir tf_model/XXXXXXXXXX \
 `movidius_car.py` 是結合軌跡車和 Movidius 模型的範例。
 
 ```sh
-./movidius_car.py --model-file model.graph
+./movidius_car.py --model-file mo2_model/tf_model.xml \
+                  --weights-file mo2_model/tf_model.bin
 ```

@@ -57,17 +57,6 @@ def main():
     out_blob = next(iter(net.outputs))
     exec_net = plugin.load(network=net)
 
-    # 載入模型檔
-    try:
-        with open(args.model_file, mode='rb') as file_graph:
-            graph_buffer = file_graph.read()
-    except (FileNotFoundError, IOError):
-        print('無法載入模型檔')
-        exit(1)
-
-    graph = mvnc.Graph('graph')
-    fifo_in, fifo_out = graph.allocate_with_fifos(mvnc_dev, graph_buffer)
-
     # 開啓影片來源
     video_dev = cv2.VideoCapture(0)
 
