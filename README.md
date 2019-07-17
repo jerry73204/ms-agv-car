@@ -4,7 +4,7 @@
 
 **準備工作**
 
-1. 蒐集照片資料，你可以使用我們提供的[資料集](https://drive.google.com/drive/folders/15MIhANzTe6-Tp55Mc-AFZMpaClvDItQv)，課堂上也會介紹建立自己的資料集。
+1. 蒐集照片資料，你可以使用我們提供的[資料集（已關閉）](https://drive.google.com/drive/folders/15MIhANzTe6-Tp55Mc-AFZMpaClvDItQv)，課堂上也會介紹建立自己的資料集。
 2. 開啓 Azure 工作站，下載本頁提供的範例程式、資料集到工作站上。
 
 **使用 Keras 模型**
@@ -21,5 +21,5 @@
 
 ## 相關頁面
 
-- [課程網站](https://www.microsoft.com/taiwan/mstechmrt/mtchandsonlab/ai/08/)
-- [課程資源](https://1drv.ms/f/s!AtbELczhnVAca08fYghS639MWFE)
+- [微軟課程網站（已關閉）](https://www.microsoft.com/taiwan/mstechmrt/mtchandsonlab/ai/08/)
+- [微軟課程資源（已關閉）](https://1drv.ms/f/s!AtbELczhnVAca08fYghS639MWFE)
