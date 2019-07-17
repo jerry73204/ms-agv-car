@@ -21,5 +21,5 @@
 
 ## 相關頁面
 
-- [微軟課程網站（已關閉）](https://www.microsoft.com/taiwan/mstechmrt/mtchandsonlab/ai/08/)
+- [微軟及 CAVEDU 課程網站](https://blog.cavedu.com/2018/08/17/%E8%AA%B2%E7%A8%8B%E7%B4%80%E9%8C%84%E6%96%87-2018-8-13-14-%E8%B7%9F%E8%91%97cavedu%E5%AD%B8ai%EF%BC%9A%E5%BE%AE%E8%BB%9Fai%E8%AA%B2/)
 - [微軟課程資源（已關閉）](https://1drv.ms/f/s!AtbELczhnVAca08fYghS639MWFE)
