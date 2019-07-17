@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# This file is subject to the terms and conditions defined in
+# file 'LICENSE.txt', which is part of this source code package.
+#
+# 本程式檔據隨附於套件的的「LICENSE.txt」檔案內容授權，感謝你遵守協議。
+
 import time
 
 import RPi.GPIO as GPIO
