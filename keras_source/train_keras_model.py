@@ -8,7 +8,7 @@ import numpy as np
 from keras.models import Model
 from keras.layers import Dense, Activation, MaxPool2D, Conv2D, Flatten, Dropout, Input, BatchNormalization, Add
 from keras.optimizers import Adam
-from keras.utils import multi_gpu_model
+from keras.utils import multi_gpu_model, plot_model
 
 # Keras 內建模型
 # https://keras.io/applications
@@ -112,6 +112,10 @@ def main():
         default=1,
         help='使用的GPU數量，預設為1',
     )
+    arg_parser.add_argument(
+        '--plot-model',
+        help='繪製模型架構圖',
+    )
     args = arg_parser.parse_args()
 
     # 資料參數
@@ -168,6 +172,8 @@ def main():
     if args.num_gpu > 1:
         model = multi_gpu_model(model, gpus=args.num_gpu)
 
+    if args.plot_model is not None:
+        plot_model(model, to_file=args.plot_model)
 
     adam = Adam()
     model.compile(
