@@ -17,23 +17,23 @@ def main():
     arg_parser = argparse.ArgumentParser(description='使用 Movidius 進行預測')
     arg_parser.add_argument(
         '--model-file',
-        required=True,
+        default='../tf_openvino_model/mo2_model/saved_model.xml',
         help='模型架構檔',
     )
     arg_parser.add_argument(
         '--weights-file',
-        required=True,
+        default='../tf_openvino_model/mo2_model/saved_model.bin',
         help='模型參數檔',
     )
     arg_parser.add_argument(
         '--video-type',
         choices=['file', 'camera'],
-        default='camera',
+        default='file',
         help='影片類型',
     )
     arg_parser.add_argument(
         '--source',
-        default='/dev/video0',
+        default='../sample_video/example_1.mp4',
         help='影片來源檔',
     )
     arg_parser.add_argument(
@@ -53,13 +53,19 @@ def main():
         action='store_true',
         help='啓用圖像界面',
     )
+    arg_parser.add_argument(
+        '--device',
+        choices=['CPU', 'MYRIAD'],
+        default='MYRIAD',
+        help='計算裝置',
+    )
 
     # 解讀程式參數
     args = arg_parser.parse_args()
     assert args.input_width > 0 and args.input_height > 0
 
     # 設置 Movidius 裝置
-    plugin = IEPlugin(device='MYRIAD')
+    plugin = IEPlugin(device=args.device)
 
     # 載入模型檔
     net = IENetwork.from_ir(model=args.model_file, weights=args.weights_file)

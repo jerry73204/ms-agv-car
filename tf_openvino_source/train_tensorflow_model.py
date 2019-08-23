@@ -232,7 +232,7 @@ def main():
     arg_parser = argparse.ArgumentParser(description='使用 TensorFlow 建立模型範例')
     arg_parser.add_argument(
         '--model-base-dir',
-        required=True,
+        default='./tf_model',
         help='模型輸出目錄',
     )
     arg_parser.add_argument(
@@ -243,12 +243,12 @@ def main():
     arg_parser.add_argument(
         '--epochs',
         type=int,
-        default=64,
+        default=32,
         help='訓練回合數',
     )
     arg_parser.add_argument(
         '--output-file',
-        default='-',
+        default='./results.txt',
         help='預測輸出檔案',
     )
     arg_parser.add_argument(
