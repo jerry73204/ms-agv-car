@@ -232,7 +232,7 @@ def main():
     arg_parser = argparse.ArgumentParser(description='使用 TensorFlow 建立模型範例')
     arg_parser.add_argument(
         '--model-base-dir',
-        default='./tf_model',
+        default='tf_model',
         help='模型輸出目錄',
     )
     arg_parser.add_argument(
@@ -248,7 +248,7 @@ def main():
     )
     arg_parser.add_argument(
         '--output-file',
-        default='./results.txt',
+        default='results.txt',
         help='預測輸出檔案',
     )
     arg_parser.add_argument(
