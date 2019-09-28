@@ -243,7 +243,7 @@ def main():
     arg_parser.add_argument(
         '--epochs',
         type=int,
-        default=32,
+        default=3,
         help='訓練回合數',
     )
     arg_parser.add_argument(
@@ -266,7 +266,7 @@ def main():
     arg_parser.add_argument(
         '--batch-size',
         type=int,
-        default=64,
+        default=32,
         help='批次大小',
     )
     arg_parser.add_argument(
